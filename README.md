@@ -1,10 +1,10 @@
 # Aave V2 DeFi Wallet Credit Scoring
 
-## 🧠 Problem Statement
+## Problem Statement
 
 Given 100K transaction-level DeFi interactions from the Aave V2 protocol, the goal is to assign a **credit score (0–1000)** to each unique wallet address. The score must reflect the reliability and responsibility of each wallet's behavior based on historical actions.
 
-## 📊 Data Description
+## Data Description
 
 - **Source**: Aave V2 protocol logs
 - **Size**: 100,000 records (~87 MB JSON)
@@ -14,7 +14,7 @@ Given 100K transaction-level DeFi interactions from the Aave V2 protocol, the go
   - `actionData`: Contains numeric fields like `amount`
   - `timestamp`: Epoch time of transaction
 
-## ⚙️ Feature Engineering
+## Feature Engineering
 
 We engineered the following wallet-level features:
 
@@ -24,7 +24,7 @@ We engineered the following wallet-level features:
   - `borrow/deposit` ratio
   - `liquidationcall` frequency
 
-## 🎯 Scoring Logic
+## Scoring Logic
 
 To simulate the score (as actual scores were not provided), we designed a heuristic:
 
@@ -34,14 +34,14 @@ score = 600 + 0.2 * mean_amount - 100 * borrow/deposit ratio - 0.1 * liquidation
 
 The score is then clipped between `0` and `1000`. This logic can be updated with true supervised labels if available.
 
-## 🤖 Model
+## Model
 
 - **Algorithm**: Random Forest Regressor (sklearn)
 - **Input**: Engineered features from above
 - **Target**: Simulated score
 - **Validation**: R² score printed for test set
 
-## 📦 Project Structure
+## Project Structure
 
 ```
 .
@@ -52,7 +52,7 @@ The score is then clipped between `0` and `1000`. This logic can be updated with
 └── analysis.md              # Score analysis
 ```
 
-## ✅ How to Run
+## How to Run
 
 1. Load the JSON file into a pandas DataFrame
 2. Run the notebook to:

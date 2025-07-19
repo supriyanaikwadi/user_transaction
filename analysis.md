@@ -1,6 +1,6 @@
 # Score Distribution and Wallet Behavior Analysis
 
-## 📊 Score Range Breakdown
+## Score Range Breakdown
 
 The predicted wallet scores are grouped and analyzed in bins:
 
@@ -17,7 +17,7 @@ The predicted wallet scores are grouped and analyzed in bins:
 
 ---
 
-## 📈 Distribution Plot
+## Distribution Plot
 
 A histogram of predicted scores is included below:
 
@@ -25,7 +25,7 @@ A histogram of predicted scores is included below:
 
 ---
 
-## 💡 Observations
+## Observations
 
 - A significant number of wallets score above 600, suggesting active and healthy DeFi usage.
 - Wallets in the 0–200 range often show patterns of:
@@ -39,7 +39,7 @@ A histogram of predicted scores is included below:
 
 ---
 
-## ✅ Conclusion
+## Conclusion
 
 This analysis can guide risk management strategies and wallet-level insights in DeFi protocols. The scoring model can be extended by:
 - Incorporating time-series trends
